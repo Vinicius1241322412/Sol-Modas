@@ -2,15 +2,15 @@
 
 @font-face {
     font-family: 'Titulo';
-    src: url(../../fontes/Pacifico-Regular.ttf) format(truetype);
+    src: url(../../fonts/Pacifico-Regular.ttf) format(truetype);
 }
 @font-face {
     font-family: 'Corpo';
-    src: url(../../fontes/DMSerifDisplay-Regular.ttf) format(truetype);
+    src: url(../../fonts/DMSerifDisplay-Regular.ttf) format(truetype);
 }
 @font-face {
     font-family: 'Padrao';
-    src: url(../../fontes/UbuntuMono-Regular.ttf) format(truetype);
+    src: url(../../fonts/UbuntuMono-Regular.ttf) format(truetype);
 }
 :root{
     --font1: 'Titulo';
