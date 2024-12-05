@@ -4,4 +4,4 @@ Site inspirado em estalebecimento real:
 
 Site publicado em: https://vinicius1241322412.github.io/Sol-Modas/
 
-Observação: Este projeto foi retirado do repositório https://github.com/Vinicius1241322412/projetos, onde o presente repositório foi criado exclusivamente para o projeto.
+Observação: Este projeto foi retirado de um repositório criando anteriormente, onde o presente repositório foi criado exclusivamente para o projeto.
