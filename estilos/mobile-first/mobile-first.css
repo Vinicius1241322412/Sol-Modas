@@ -2,15 +2,15 @@
 
 @font-face {
     font-family: 'Titulo';
-    src: url(../../fonts/Pacifico-Regular.ttf) format(truetype);
+    src: url(../../fontes/Pacifico-Regular.ttf) format(truetype);
 }
 @font-face {
     font-family: 'Corpo';
-    src: url(../../fonts/DMSerifDisplay-Regular.ttf) format(truetype);
+    src: url(../../fontes/DMSerifDisplay-Regular.ttf) format(truetype);
 }
 @font-face {
     font-family: 'Padrao';
-    src: url(../../fonts/UbuntuMono-Regular.ttf) format(truetype);
+    src: url(../../fontes/UbuntuMono-Regular.ttf) format(truetype);
 }
 :root{
     --font1: 'Titulo';
@@ -249,7 +249,7 @@ section a:hover{
     align-items: center;
     justify-content: center;
     height: 40vh;
-    background-image: url(../../images/background2.jpeg);
+    background-image: url(../../imagens/background2.jpeg);
     background-size: cover;
     background-position: center center;
     font-family: var(--font2);
@@ -351,7 +351,7 @@ aside{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to right, var(--cor3) 1%, rgba(255, 255, 255, 0)), url(../../images/loja-foto.jpeg);
+    background-image: linear-gradient(to right, var(--cor3) 1%, rgba(255, 255, 255, 0)), url(../../imagens/loja-foto.jpeg);
     background-repeat: no-repeat;
     background-position: center right;
     background-size:cover;

@@ -164,7 +164,7 @@ header #div-bar > span{
     height: 50vh;
     min-height: 450px;
     justify-content: flex-start;
-    background-image: linear-gradient(to right, var(--cor3) 2%, var(--tr1)), url(../../images/loja-mae.png);
+    background-image: linear-gradient(to right, var(--cor3) 2%, var(--tr1)), url(../../imagens/loja-mae.png);
 
 }
 #sec1 > div{

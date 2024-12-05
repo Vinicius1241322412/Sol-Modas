@@ -100,7 +100,7 @@ label{
     margin: 15px 0px;
 }
 #imagem-fundo{
-    background: var(--tr3) url(../../images/loja-interna-luzes.jpeg);
+    background: var(--tr3) url(../../imagens/loja-interna-luzes.jpeg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
