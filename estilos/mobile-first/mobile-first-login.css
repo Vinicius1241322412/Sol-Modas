@@ -1,0 +1,139 @@
+:root{
+    --font1: 'Titulo';
+    --font2: 'Corpo';
+    --font3: 'Padrão';
+    --cor1: #FFF4E5;
+    --cor2: #F5D6A1;
+    --cor3: #99794D;
+    --cor4: #66481F;
+    --cor5: #4A2E07;
+    --tr1: rgba(0, 0, 0, 0);
+    --tr2: #9b774394;
+}
+body,html{
+    height: 100vh;
+    overflow-y: hidden
+}
+header{
+    height: 10%;
+}
+#conta{
+    visibility: collapse;
+}
+header > div{
+    height: 100%;
+}
+main{
+    background-color: var(--cor4);
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+main > #container-login{
+    background-color: var(--cor1);
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--cor5);
+    width: 95%;
+    max-width: 350px;
+    height: 95%;
+    max-height: 600px;
+    min-height: 400px;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.399);
+}
+label{
+    width: 25%;
+    font-size: 0.8em;
+}
+.campo{
+    color: var(--cor1);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    padding: 5px;
+    background-color: var(--cor4);
+    border-radius: 5px;
+}
+#container-login input[type = email], #container-login input[type = password]{
+    font-size: 1em;
+    width: 75%;
+    margin-left: 5px;
+}
+#container-login input[type = submit]{
+    background-color: var(--cor4);
+    color: white;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    width: 40%;
+    transition: 0.3s;
+}
+#container-login input[type = submit]:hover{
+    background-color: var(--cor3);
+}
+#login-form{
+    text-align: center;
+    width: 80%;
+    height: 50%;
+    min-height: 200px;
+}
+#login-form p{
+    width: 90%;
+    font-size: 0.8em;
+    text-align: center;
+    margin: 10px auto;
+}
+#login-form p > span{
+    display: block;
+    text-align: center;
+}
+#login-form h2{
+    font-size: 3.5vh;
+    margin: 15px 0px;
+}
+#imagem-fundo{
+    background: var(--tr3) url(../../images/loja-interna-luzes.jpeg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50%;
+    min-height: 200px;
+    width: 100%;
+    border-radius: 0px 0px 20px 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (orientation: landscape) {
+    header{
+        height: 10vw;
+    }
+    main{
+        height: auto;
+    }
+    body{
+        overflow-y: auto;
+    }
+    main > #container-login{
+        height: 600px;
+        width: 300px;
+    }
+    #login-form p{
+        font-size: 1em;
+    }
+    #login-form h2{
+        font-size: 1.5em;
+    }
+}

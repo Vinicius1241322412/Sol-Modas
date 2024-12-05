@@ -1,0 +1,530 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Titulo';
+    src: url(../../fonts/Pacifico-Regular.ttf) format(truetype);
+}
+@font-face {
+    font-family: 'Corpo';
+    src: url(../../fonts/DMSerifDisplay-Regular.ttf) format(truetype);
+}
+@font-face {
+    font-family: 'Padrao';
+    src: url(../../fonts/UbuntuMono-Regular.ttf) format(truetype);
+}
+:root{
+    --font1: 'Titulo';
+    --font2: 'Corpo';
+    --font3: 'Padrao';
+    --cor1: #FFF4E5;
+    --cor2: #F5D6A1;
+    --cor3: #99794D;
+    --cor4: #66481F;
+    --cor5: #4A2E07;
+    --tr1: rgba(0, 0, 0, 0);
+    --tr2: rgba(0, 0, 0, 0.500);
+    --tr3: #99794d8d;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    list-style-position: inside;
+}
+
+h2{
+    font-family: 'Corpo';
+}
+
+body, html{
+    height: 100vh;
+    width: 100vw;
+    scroll-behavior: smooth;
+    font-family: 'Padrao';
+    overflow-x: hidden;
+}
+header{
+    color: var(--cor5);
+    background-color: var(--cor2);
+    padding: 10px;
+    height: auto;
+    border-bottom: 2px solid var(--cor3);
+}
+header > div{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+header > #div-bar{
+    background-color: var(--cor5);
+    border-radius: 10px;
+    padding: 5px;
+    width: 70%;
+    height: 5%;
+    margin: 5px auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.559);
+}
+header #div-bar > span{
+    color: white;
+    width: 15%;
+    text-align: center;
+    font-size: 2.5vh;
+}
+header input{
+    width: 85%;
+    font-size: 1em;
+    padding: 2px;
+    border: none;
+    border-radius: 5px;
+}
+header h1 {
+    font-family: 'Corpo';
+    font-size: 5vh;
+    color: var(--cor5);
+    display: flex;
+    align-items: center;
+}
+header a{
+    text-decoration: none;
+}
+header #sol {
+    font-size: 5vh;
+    margin-left: 5px;
+}
+header #menu{
+    font-size: 5vh;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+header #conta{
+    font-size: 5vh;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--cor5);
+}
+header #conta:hover{
+    background-color: var(--cor3);
+    transition: 0.3s;
+}
+/* NAV ================*/
+header #Nav{
+    left: 0%;
+    top: 0%;
+    height: 100vh;
+    z-index: 10;
+    width: 0vw;
+    min-width: none;
+    max-width: 50vw;
+    transition: all 0.5s;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 20px;
+    position: fixed;
+    border-right: 2px solid var(--cor4);
+    background-color: var(--cor1);
+}
+.clicked{
+    background-color: var(--cor3);
+    border: none;
+}
+.clicked:hover{
+    background-color: var(--cor3);
+    color: var(--cor5);
+    border: none;
+}
+header nav a{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.5s;
+    font-size: 3vh;
+    height: 6vh;
+    width: 90%;
+    white-space:nowrap;
+    margin: 10px auto 0px auto;
+    color: var(--cor5);
+    border-radius: 10px;
+    border: 2px solid var(--cor2);
+}
+header nav a:hover{
+    background-color: var(--cor2);
+}
+header nav #login{
+    border-radius: 0px;
+    position: relative;
+    transition: all 0.3s;
+    background-color: var(--cor4);
+    display: flex;
+    height: 10vh;
+    color: var(--cor2);
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font2);
+    font-weight: normal;
+    border: none;
+    margin: 5vh 0px 0px 0px;
+    width: 100%;
+    left: 0%;
+    bottom: 0%;
+}
+header nav #login span{
+    font-size: 4vh;
+}
+header nav #login:hover{
+    background-color: var(--cor3);
+}
+header #produtos2{
+    white-space:nowrap;
+    overflow-y: hidden;
+    transition: all 0.5s;
+    max-height: 0vh;
+    height: auto;
+}
+#produtos2 > a{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 3vh;
+    transition: all 0.5s;
+    width: 70%;
+    height: 5vh;
+    margin-bottom: 2.5vh;
+    text-indent: 0px;
+    color: var(--cor5);
+    border-radius: 10px;
+    border: 2px solid var(--cor2);
+}
+#produtos2-absolute{
+    display: none;
+}
+#Nav #left{
+    border-radius: 50%;
+    position: absolute;
+    padding: 2%;
+    margin: 0px 5%;
+    right: 0%;
+    font-size: 2.5vh;
+    transform: rotate(-90deg);
+    transition: 0.2s;
+    color: var(--cor4);
+}
+#fundo{
+    background-color: rgba(0, 0, 0, 0);
+    position: fixed;
+    z-index: 9;
+    transition: background-color 1s;
+    height: 100vh;
+    width: 0vw;
+}
+/*==============================================*/
+main > section a{
+    background-color: var(--cor4);
+    font-family: var(--font3);
+    text-decoration: none;
+    color: var(--cor1);
+    border-radius: 10px;
+    position: relative;
+    font-size: 1.6vh;
+    padding: 1.5vh;
+    margin-top: 10px;
+    display: inline-block;
+}
+section a:hover{
+    background-color: var(--cor3);
+    transition: 0.4s;
+}
+
+/* SEÇÃO 1 ==============================================================================================*/
+#sec1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    background-image: url(../../images/background2.jpeg);
+    background-size: cover;
+    background-position: center center;
+    font-family: var(--font2);
+}
+#sec1 div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor1);
+    width: 70%;
+    height: 70%;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.696);
+}
+#sec1 a{
+    position: relative;
+    padding: 1.5vh;
+    margin-top: 10px;
+    font-size: 2vh;
+    display: inline-block;
+}
+#sec1 h2{
+    font-size: 4vh;
+}
+#sec1 p{
+    text-align: center;
+    font-weight: normal;
+    font-size: 2.5vh;
+}
+/* SEÇÃO 2 ==============================================================================================*/
+#sec2{
+    position: relative;
+}
+#sec2 h2{
+    text-align: center;
+    color: var(--cor5);
+    font-family: var(--font2);
+    margin: 20px 0px;
+    font-size: 5vh;
+}
+#sec2 a{
+    margin: 10px auto;
+    text-align: center;
+    display: block;
+    font-size: 2vh;
+    max-width: 200px;
+}
+#vendidos{
+    width: 100%;
+}
+#vendidos > ul{
+    display: flex;
+    width: 95%;
+    max-width: 500px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+#vendidos > ul > li{
+    height: 40vh;
+    border-radius: 10px;
+    background-color: var(--cor1);
+    flex: 1 1 40%;
+    max-width: 200px;
+    text-align: center;
+    margin: 10px;
+    display: block;
+}
+#vendidos li p{
+    margin: 0.5vh 0px;
+    font-size: 2vh;
+    color: var(--cor5);
+}
+#vendidos li .preco{
+    font-weight: bold;
+    font-size: 2.5vh;
+}
+#vendidos li > img{
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    height: 70%;
+}
+#vendidos li > .info{
+    padding: 5px;
+    height: 30%;
+    width: 100%;
+}
+
+/*ASIDE ==============================================================================================*/
+aside{
+    height: 40vh;
+    padding: 20px;
+    width: 95vw;
+    min-width: 250px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, var(--cor3) 1%, rgba(255, 255, 255, 0)), url(../../images/loja-foto.jpeg);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size:cover;
+    border-radius: 20px 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.51);
+    margin: 20px auto;
+}
+aside > div{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px 5px;
+    background-color: var(--tr2);
+    left: 10%;
+    bottom: 50%;
+    height: 60%;
+    color: var(--cor1);
+}
+aside li{
+    margin-top: 10px;
+    font-size: 2vh;
+}
+aside h2{
+    font-size: 3vh;
+    font-weight: normal;
+}
+/* FOOTER ==============================================================================================*/
+footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    color: var(--cor1);
+    border-top: 1px solid var(--cor3);
+    background-color: var(--cor1);
+}
+footer h2{
+    font-weight: normal;
+    text-align: center;
+    font-size: 5vw;
+}
+footer #insta{
+    color: #ffffff;
+}
+footer #insta:hover{
+    background-color: rgba(255, 255, 255, 0);
+}
+footer #call{
+    font-size: 2.5vh;
+}
+footer li{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    justify-content: flex-start;
+    font-size: 4vw;
+}
+footer img{
+    width: 2.2vh;
+    margin: 5px 10px 5px 0px;
+}
+footer section{
+    background-color: var(--cor3);
+    border-radius: 20px;
+    padding: 10px;
+    flex: 1 1 6vh;
+    text-align: left;
+    list-style-position: inside;
+    margin: 2%;
+    min-width: 250px;
+    max-width: 500px;
+    box-shadow: 50px 50px 100px solid black;
+    width: 85%;
+}
+@media screen and (orientation: landscape) {
+    header h1, header #menu, header #conta, header #sol{
+        font-size: 7vw;
+    }
+    header nav a{
+        font-size: 3vw;
+        height: 6vw;
+    }
+    header #div-bar > span{
+        font-size: 3vw;
+    }
+    header #div-bar{
+        width: 60%;
+    }
+    header nav #produtos2 a{
+        font-size: 3vw;
+        height: 5vw;
+    }
+    header nav #login {
+        height: 8vw;
+    }
+    header nav #login span{
+        font-size: 4vw;
+    }
+    #Nav #left{
+        font-size: 2.5vw;
+    }
+    aside h2, footer h2, #sec1 h2, #sec2 h2{
+        font-size: 4vw;
+    }
+    main > section a, #sec1 a{
+        font-size: 2.5vw;
+        padding: 2vw;
+    }
+
+    #sec1{
+        height: 50vw;
+        min-height: 200px;
+    }
+    #sec1 > div{
+        width: 50%;
+        height: 65%;
+        max-height: 350px;
+        min-height: 200px;
+    }
+    #sec1 div > p{
+        font-size: 3.5vw;
+    }
+    #sec1 div > h2{
+        font-size: 5vw;
+    }
+    #sec1 a{
+        font-size: 2vw;
+    }
+    #sec2 h2{
+        font-size: 6vw;
+    }
+    #sec2 a{
+        font-size: 2vw;
+    }
+    #vendidos > ul > li{
+        height: 40vw;
+        flex: 1 1 35%;
+        max-width: 35%;
+    }
+    #vendidos li p{
+        font-size: 0.8em;
+    }
+    #vendidos li .preco{
+        font-size: 0.9em;
+    }
+    aside{
+        height: 40vw;
+        max-height: 80vh;
+        min-height: 200px;
+    }
+    aside > div{
+        min-height: 180px;
+        max-height: 210px;
+    }
+    aside li{
+        font-size: 2.5vw;
+    }
+    footer #call{
+        font-size: 3vw;
+    }
+    footer h2{
+        font-size: 4vw;
+    }
+    footer li{
+        font-size: 2.5vw;
+    }
+    footer img{
+        width: 3vw;
+    }
+    footer section{
+        width: 50%;
+    }
+}
